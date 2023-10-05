@@ -1,29 +1,35 @@
 from random import randint
-
+#needed in order to randomise the input of computer each time 
 
 print("Welcome to the Ultimate Rock, Paper, Scissors Game \n I hope you are ready \n...ROCK...\n...PAPER...\n...SCISSORS...")
 Player1 = input("(enter Player 1's choice):")
-Player2 = randint(1,3)
+Computer = randint(1,3)
 print("Shoot!!!!")
-1 is "rock"
-2 is "scissors"
-3 is "paper" 
-if Player1 == Player2: 
-        print("You guys are evenly matched , Its a tie")
+if randint == 1:
+    Computer = "rock"
+elif randint == 2:
+    Computer = "paper" 
+else:
+    Computer = "scissors"
+#f string allows you to write a string that contains a value/str
+print(f"Computer plays {Computer}" )
+#
+if Player1 == Computer: 
+        print("You are as smart as a computer , Its a tie")
 elif Player1 == "rock": 
-    if Player2 == "scissors":
-        print("Player 1 wins")
-    elif Player2 == "paper":
-        print("Player 2 wins")
+    if Computer == "scissors":
+        print("You win")
+    elif Computer == "paper":
+        print("Computer wins")
 elif Player1 == "paper": 
-    if Player2 == "scissors":
-        print("Player 2 wins")
-    elif Player2 == "rock":
+    if Computer == "scissors":
+        print("Computer wins")
+    elif Computer == "rock":
         print("Player 1 wins")  
 elif Player1 == "paper": 
-    if Player2 == "scissors":
-        print("Player 2 wins")
-    elif Player2 == "rock":
+    if Computer == "scissors":
+        print("Computer wins")
+    elif Computer == "rock":
         print("Player 1 wins") 
 
 else: print("Something went wrong")
